@@ -1234,7 +1234,7 @@ def plot_current(jx,jy,jz,x,y,z,savename,s,amp,co,path, align1, align2):
                          (x2+jx[ix,iy,iz]/(4*norm2)),\
                          (y2+jy[ix,iy,iz]/(4*norm2)),\
                          (z2+jz[ix,iy,iz]/(4*norm2)),\
-                         norm*amp,\
+                         norm2*amp,\
                          color))
                     a += 1
         text_file.write("set defaultdrawarrowscale 0.1 \n")
@@ -1261,7 +1261,7 @@ def plot_current(jx,jy,jz,x,y,z,savename,s,amp,co,path, align1, align2):
                          (x2+jx[ix,iy,iz]/(4*norm2)),\
                          (y2+jy[ix,iy,iz]/(4*norm2)),\
                          (z2+jz[ix,iy,iz]/(4*norm2)),\
-                         norm*amp,\
+                         norm2*amp,\
                          color))
                     a += 1
         text_file.write("set defaultdrawarrowscale 0.1 \n")
