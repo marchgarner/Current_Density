@@ -388,8 +388,11 @@ dz = (z_cor[1]-z_cor[0])
     
 SI = 31
 EI = -31
-j_z_cut = jz_c[:,:,SI:EI]
-multiplier = 1/(3*j_z_cut[::2,::2,::2].max())
+j_x_cut = jx_c[:, :, SI:EI]
+j_y_cut = jy_c[:, :, SI:EI]
+j_z_cut = jz_c[:, :, SI:EI]
+multiplier = 1/(3*np.sqrt(j_x_cut[:, :, :]**2+j_y_cut[:, :, :]**2+j_z_cut[:, :, :]**2).max())
+
 cut_off = j_z_cut[::2,::2,::2].max()/20.
     
 #sjette sidste arg er divider for real space grid, multiplier giver tykkere diameter
